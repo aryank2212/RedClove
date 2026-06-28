@@ -1,0 +1,9 @@
+/* Canvas fills its positioned parent. The hero section sets position:relative
+   and layers content above it. */
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

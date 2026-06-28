@@ -1,0 +1,36 @@
+.btn {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  z-index: 900;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity var(--speed) var(--ease), transform var(--speed) var(--ease),
+    background var(--speed) var(--ease);
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.btn:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Nudge above the sticky CTA on small screens so they don't overlap. */
+@media (max-width: 640px) {
+  .btn {
+    bottom: 5.5rem;
+  }
+}

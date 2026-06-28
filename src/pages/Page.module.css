@@ -1,0 +1,50 @@
+/* Shared sub-page header — a compact banner with a terminal breadcrumb,
+   used by Courses / Pricing / Contact. */
+.banner {
+  padding-top: calc(var(--nav-h) + var(--space-5));
+  padding-bottom: var(--space-5);
+  background: var(--color-primary);
+  color: #fff;
+  border-bottom: 3px solid var(--color-accent);
+  position: relative;
+  overflow: hidden;
+}
+/* Faint grid texture */
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.crumb {
+  position: relative;
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+.crumb::before {
+  content: '~/redclove $ ';
+  color: #777;
+}
+
+.bannerTitle {
+  position: relative;
+  font-size: var(--fs-3xl);
+  line-height: 1.05;
+  color: #fff;
+}
+.bannerTitle span {
+  color: var(--color-accent);
+}
+
+.bannerSub {
+  position: relative;
+  margin-top: var(--space-2);
+  color: #b8b8b8;
+  font-size: var(--fs-lg);
+  max-width: 60ch;
+}

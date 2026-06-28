@@ -1,0 +1,57 @@
+.band {
+  background: var(--color-primary);
+  color: #fff;
+  padding-block: var(--space-5);
+  /* Faint scanline texture reinforces the terminal aesthetic. */
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.stat {
+  padding: var(--space-2);
+  border-left: 1px solid #2a2a2a;
+}
+.stat:first-child {
+  border-left: none;
+}
+
+.num {
+  display: block;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.suffix {
+  color: var(--color-accent);
+}
+
+.label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: var(--fs-sm);
+  color: #b8b8b8;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4) var(--space-2);
+  }
+  .stat:nth-child(odd) {
+    border-left: none;
+  }
+}

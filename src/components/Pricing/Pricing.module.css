@@ -1,0 +1,126 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  position: relative;
+  transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease),
+    border-color var(--speed) var(--ease);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: var(--color-primary);
+}
+
+/* Featured tier: dark terminal panel, lifted above siblings. */
+.featured {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-accent);
+  transform: scale(1.03);
+}
+.featured:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.name {
+  font-size: var(--fs-xl);
+}
+.tagline {
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+  min-height: 2.6em;
+}
+.featured .tagline {
+  color: #b8b8b8;
+}
+
+.price {
+  margin-block: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dashed var(--color-line);
+}
+.featured .price {
+  border-color: #333;
+}
+.amount {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+.period {
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+  margin-left: 0.25rem;
+}
+.featured .period {
+  color: #b8b8b8;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: var(--space-3);
+  flex: 1;
+}
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+}
+.check {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cta {
+  width: 100%;
+  justify-content: center;
+}
+/* Ghost button needs light border on the dark featured card. */
+.featured .cta:not(.btn--accent) {
+  border-color: #fff;
+  color: #fff;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-inline: auto;
+  }
+  .featured {
+    transform: none;
+  }
+  .featured:hover {
+    transform: translateY(-6px);
+  }
+}

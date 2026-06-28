@@ -1,0 +1,77 @@
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* ---- Aside ---- */
+.asideTitle {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-2);
+}
+.asideBody {
+  color: var(--color-secondary);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-3);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.detail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.detailIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius);
+}
+.detailLabel {
+  display: block;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+.detailValue {
+  display: block;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+}
+
+.policy {
+  font-size: var(--fs-xs);
+  color: var(--color-secondary);
+  padding: var(--space-2);
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+/* ---- Form panel ---- */
+.formWrap {
+  padding: var(--space-4);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

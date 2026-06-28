@@ -1,0 +1,12 @@
+.head {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+.title {
+  font-size: var(--fs-2xl);
+}
+
+.faqSection {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-line);
+}
