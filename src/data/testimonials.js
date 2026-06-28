@@ -3,34 +3,29 @@
 export const testimonials = [
   {
     id: 1,
+    slug: 'aryan',
     quote:
-      'RedClove rebuilt our analysts from the ground up. Six weeks in, the team was shipping intelligence products our customers actually trusted.',
-    name: 'Cmdr. A. Vasquez',
-    role: 'Joint Intelligence Cell',
-    seed: 'person-vasquez',
+      'Building RedClove has been a journey of bringing top-tier intelligence systems and cyber capabilities to those who need them most.',
+    name: 'R. Aryan',
+    role: 'Founder',
+    seed: 'person-aryan',
   },
   {
     id: 2,
+    slug: 'aniket',
     quote:
-      'The offensive cyber range is the most realistic I have used outside of a live engagement. Nothing about it was theoretical.',
-    name: 'D. Okonkwo',
-    role: 'Lead Red Team Operator',
-    seed: 'person-okonkwo',
+      'Our offensive and defensive ranges provide unparalleled realism, ensuring our clients are prepared for tomorrow\'s threats today.',
+    name: 'Aniket Rathoure',
+    role: 'Founder',
+    seed: 'person-aniket',
   },
   {
     id: 3,
+    slug: 'chhavi',
     quote:
-      'We sent four engineers through Defensive Systems Engineering. All four now run their own hardening programs.',
-    name: 'S. Lindqvist',
-    role: 'Director of Engineering, Northgate Systems',
-    seed: 'person-lindqvist',
-  },
-  {
-    id: 4,
-    quote:
-      'Disciplined, ethical and relentlessly practical. RedClove takes the responsibility of this work as seriously as we do.',
-    name: 'Maj. R. Haddad',
-    role: 'Defense Acquisition Office',
-    seed: 'person-haddad',
+      'We don\'t just teach theory; we instill the discipline and practical skills required to operate at the highest levels of security.',
+    name: 'Chhavi Sharma',
+    role: 'Founder',
+    seed: 'person-chhavi',
   },
 ]

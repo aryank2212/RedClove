@@ -29,32 +29,53 @@
 }
 
 .quote {
-  font-size: var(--fs-lg);
-  line-height: 1.5;
-  font-weight: 500;
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  font-weight: 400;
   max-width: 60ch;
   margin-inline: auto;
+  color: var(--color-muted);
 }
 
-.person {
+.personWrap {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: var(--space-3);
-  text-align: left;
+  gap: 1rem;
+  margin-bottom: var(--space-4);
+  text-align: center;
 }
 .avatar {
   border-radius: 50%;
-  border: 2px solid var(--color-accent);
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+}
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
 }
 .name {
   display: block;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
+  font-weight: 700;
 }
 .role {
   display: block;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   color: var(--color-muted);
+}
+.viewMore {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+  text-decoration: underline;
+  margin-top: 0.25rem;
+  transition: color var(--speed) var(--ease);
+}
+.viewMore:hover {
+  color: #fff;
 }
 
 /* --- Controls --------------------------------------------------------- */

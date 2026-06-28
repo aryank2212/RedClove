@@ -7,8 +7,8 @@ import BackToTop from './components/BackToTop/BackToTop'
 import StickyCTA from './components/StickyCTA/StickyCTA'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
-import PricingPage from './pages/PricingPage'
 import Contact from './pages/Contact'
+import Founder from './pages/Founder'
 
 /**
  * ScrollToTop — resets scroll position on every route change so navigating
@@ -42,8 +42,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/founder/:id" element={<Founder />} />
           {/* Fallback: unknown routes render the home page */}
           <Route path="*" element={<Home />} />
         </Routes>

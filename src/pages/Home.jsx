@@ -52,36 +52,31 @@ export default function Home() {
 
         {/* Decorative parallax code panels */}
         <pre ref={float1} className={`${styles.codePanel} ${styles.panelA}`} aria-hidden="true">
-{`> redclove --init
+          {`> redclove --init
 [ok] threat model loaded
-[ok] range online
-> deploy intel.pipeline`}
+[ok] range online`}
         </pre>
         <pre ref={float2} className={`${styles.codePanel} ${styles.panelB}`} aria-hidden="true">
-{`status: OPERATIONAL
-clearance: GRANTED
-uptime: 99.99%`}
+          {`status: OPERATIONAL`}
         </pre>
 
         <div className={`container ${styles.heroInner}`}>
-          <p className={styles.kicker}>RedClove // Academy</p>
+          <p className={styles.kicker}>RedClove</p>
           <h1 className={styles.title}>
-            Train the operators who
-            <span className={styles.titleAccent}> defend what matters.</span>
+            AI-POWERED AUTOMATION.
+            DEFEND WHAT <span className={styles.titleAccent}>MATTERS.</span>
           </h1>
           <p className={styles.lede}>
-            RedClove builds weapons and intelligence systems for governments and enterprises — and
-            the Academy is where we train the people who run them. Live ranges, real tooling,
-            zero theory.
+            RedClove provides strategic data-handling and intelligence systems that helps Governments and Enterprises to make better stratigic decisions.
           </p>
-          <p className={styles.tagline}>-Making the world a better place.</p>
+          <p className={styles.tagline}>-Making the world a better place through smarter decisions</p>
 
           <div className={styles.heroCtas}>
             <Link to="/courses" className="btn btn--accent">
-              Browse courses <ArrowRight size={16} aria-hidden="true" />
+              Browse our agenda <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link to="/contact" className="btn btn--ghost">
-              Request access
+              Request consultation
             </Link>
           </div>
         </div>
@@ -97,7 +92,7 @@ uptime: 99.99%`}
         <ScrollReveal as="header" className={styles.sectionHead}>
           <p className="eyebrow">capabilities</p>
           <h2 id="pillars-h" className={styles.sectionTitle}>
-            Four disciplines. One standard.
+            Four core offerings.
           </h2>
         </ScrollReveal>
 
@@ -118,13 +113,12 @@ uptime: 99.99%`}
       {/* ---------------- COURSE PREVIEW (masonry) ---------------- */}
       <section className="section container" aria-labelledby="preview-h">
         <ScrollReveal as="header" className={styles.sectionHead}>
-          <p className="eyebrow">curriculum</p>
+          <p className="eyebrow">Catalouge</p>
           <h2 id="preview-h" className={styles.sectionTitle}>
-            A catalogue built from the field.
+            Our latest programs.
           </h2>
           <p className={styles.sectionSub}>
-            Every course is derived from live RedClove engagements, then stripped of anything that
-            isn&apos;t operationally useful.
+            These programs cover a range of topics, including intelligence systems, cyber operations, Applied-AI and more.
           </p>
         </ScrollReveal>
 
@@ -137,13 +131,13 @@ uptime: 99.99%`}
         </div>
       </section>
 
-      {/* ---------------- TESTIMONIALS ---------------- */}
+      {/* ---------------- FOUNDERS ---------------- */}
       <section className={`section ${styles.testiSection}`} aria-labelledby="testi-h">
         <div className="container">
           <ScrollReveal as="header" className={styles.sectionHead}>
-            <p className="eyebrow">field reports</p>
+            <p className="eyebrow">leadership</p>
             <h2 id="testi-h" className={styles.sectionTitle}>
-              Trusted where it counts.
+              Meet the Founders.
             </h2>
           </ScrollReveal>
           <Testimonials />
@@ -159,7 +153,7 @@ uptime: 99.99%`}
               Get the briefing.
             </h2>
             <p className={styles.newsletterSub}>
-              Monthly tradecraft notes, new cohort dates and range updates. No spam, ever.
+              Monthly updates, program dates and insights.
             </p>
           </div>
           <Newsletter />

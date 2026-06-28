@@ -26,8 +26,7 @@ export default function Contact() {
             Request <span>access.</span>
           </h1>
           <p className={page.bannerSub}>
-            Tell us about your team and your mission. We&apos;ll verify eligibility and map you to
-            the right track.
+            Tell us about your mission..
           </p>
         </div>
       </header>
@@ -37,10 +36,9 @@ export default function Contact() {
           {/* ---- Aside: details ---- */}
           <ScrollReveal as="aside" className={styles.aside}>
             <p className="eyebrow">direct lines</p>
-            <h2 className={styles.asideTitle}>Talk to a program lead.</h2>
+            <h2 className={styles.asideTitle}>Talk to us.</h2>
             <p className={styles.asideBody}>
-              Every enrollment is reviewed by a human. Reach out and we&apos;ll start the
-              authorization process together.
+              Reach out.
             </p>
 
             <ul className={styles.details}>

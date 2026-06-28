@@ -7,7 +7,6 @@ import styles from './Navbar.module.css'
 const links = [
   { to: '/', label: 'Home' },
   { to: '/courses', label: 'Courses' },
-  { to: '/pricing', label: 'Pricing' },
   { to: '/contact', label: 'Contact' },
 ]
 

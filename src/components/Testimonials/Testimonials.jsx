@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { testimonials } from '../../data/testimonials'
 import styles from './Testimonials.module.css'
@@ -9,20 +10,31 @@ import styles from './Testimonials.module.css'
  */
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
+  const [direction, setDirection] = useState(1)
   const [paused, setPaused] = useState(false)
   const count = testimonials.length
 
   const go = useCallback(
-    (dir) => setIndex((i) => (i + dir + count) % count),
+    (dir) => {
+      setIndex((i) => (i + dir + count) % count)
+    },
     [count]
   )
 
-  // Auto-advance every 6s unless paused.
+  // Auto-advance every 4.5s with ping-pong logic.
   useEffect(() => {
     if (paused) return
-    const id = setInterval(() => go(1), 6000)
+    const id = setInterval(() => {
+      setIndex((i) => {
+        let nextDir = direction
+        if (i === 0) nextDir = 1
+        else if (i === count - 1) nextDir = -1
+        setDirection(nextDir)
+        return i + nextDir
+      })
+    }, 4500)
     return () => clearInterval(id)
-  }, [paused, go])
+  }, [paused, count, direction])
 
   const onKeyDown = (e) => {
     if (e.key === 'ArrowLeft') go(-1)
@@ -33,7 +45,7 @@ export default function Testimonials() {
     <section
       className={styles.wrap}
       aria-roledescription="carousel"
-      aria-label="What partners say"
+      aria-label="Founders"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -53,22 +65,23 @@ export default function Testimonials() {
               aria-roledescription="slide"
               aria-label={`${i + 1} of ${count}`}
             >
-              <Quote className={styles.quoteIcon} size={36} aria-hidden="true" />
-              <blockquote className={styles.quote}>{t.quote}</blockquote>
-              <figcaption className={styles.person}>
+              <div className={styles.personWrap}>
                 <img
-                  src={`https://picsum.photos/seed/${t.seed}/120/120`}
+                  src={`https://picsum.photos/seed/${t.seed}/200/200`}
                   alt=""
-                  width="56"
-                  height="56"
+                  width="90"
+                  height="90"
                   loading="lazy"
                   className={styles.avatar}
                 />
-                <span>
+                <div className={styles.personInfo}>
                   <strong className={styles.name}>{t.name}</strong>
                   <span className={styles.role}>{t.role}</span>
-                </span>
-              </figcaption>
+                  <Link to={`/founder/${t.slug}`} className={styles.viewMore}>view more</Link>
+                </div>
+              </div>
+              <Quote className={styles.quoteIcon} size={36} aria-hidden="true" />
+              <blockquote className={styles.quote}>{t.quote}</blockquote>
             </figure>
           ))}
         </div>
