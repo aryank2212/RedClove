@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import CustomCursor from './components/CustomCursor/CustomCursor'
@@ -52,6 +53,7 @@ export default function App() {
       <Footer />
       <BackToTop />
       <StickyCTA />
+      <Analytics />
     </>
   )
 }
